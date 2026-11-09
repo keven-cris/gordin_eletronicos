@@ -58,8 +58,28 @@
     left: -140px;                        /* valor negativo: empurra para a ESQUERDA do ponto de referência */
 }
 
+.rl2 {
+    background-color: white;             /* cor que aparece se a imagem não carregar */
+    border: 2px black solid;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;              /* conteúdo empilhado */
+    justify-content: center;             /* centraliza na vertical */
+    align-items: center;                 /* centraliza na horizontal */
+    border-radius: 30px;                 /* cantos arredondados */
+    position: absolute;
+    left: 195px;                        /* valor negativo: empurra para a ESQUERDA do ponto de referência */
+}
+
 /* Área que envolve o título e a caixa .rl */
 .area-carrinho {
+    position: absolute;
+    left: 365px;                         /* 365px da borda esquerda da página */
+    top: 130px;                          /* 130px do topo da página */
+    width: 500px;
+}
+.area-carrinho2 {
     position: absolute;
     left: 365px;                         /* 365px da borda esquerda da página */
     top: 130px;                          /* 130px do topo da página */

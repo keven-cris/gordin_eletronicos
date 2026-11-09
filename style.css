@@ -1,6 +1,7 @@
 body {
     background-color: white;
     margin: 0;                           /* tira a margem padrão do navegador */
+    font-family: Arial, sans-serif;      /* fonte do site (sans-serif é a reserva se Arial faltar) */
     font-size: 16px;                     /* tamanho padrão da letra */
     padding: 0px;
 }
@@ -64,7 +65,12 @@ h2 {
 
     top: 15%;                            /* desce 15% (a base da conta é a altura do pai) */
 }
-
+.divdecelular2 {
+    width: 850px;
+    height: 400px;
+    position: relative;
+    top: 15%;                            /* desce 15% (a base da conta é a altura do pai) */
+}
 /* Card "Troca Smart" */
 .troca {
     border: 2px solid black;
@@ -88,7 +94,15 @@ h2 {
     background-color: white;
     border-radius: 30px;
 }
-
+.infos {
+    width: 450px;
+    height: 450px;
+    border: 2px solid black;
+    position: absolute;
+    left: 700px;
+    top: 70px;
+    background-color: white;
+}
 /* Card do segundo celular (Motorola) */
 .celular2 {
     width: 250px;
@@ -134,20 +148,29 @@ h2 {
 }
 
 /* Imagem decorativa do lado esquerdo do cadastro */
-.decor1 {
+.decor1,  .decor3{
     position: absolute;
     left: 10%;                           /* 10% da largura da tela, a partir da esquerda */
     top: 180px;
 }
 
+.decor3{
+    position: absolute;
+    left: 1%;                           /* 10% da largura da tela, a partir da esquerda */
+    top: 180px;
+}
 /* Imagem decorativa do lado direito do cadastro */
-.decor2 {
+.decor2, .decor4{
     position: absolute;
     right: 10%;                          /* 10% da largura da tela, a partir da DIREITA */
     top: 180px;
 }
 
-
+.decor4{
+    position: absolute;
+    right: 1%;                          /* 10% da largura da tela, a partir da DIREITA */
+    top: 180px;
+}
 /* ---------- CAIXINHA DA CONTA (pagina1) ---------- */
 
 /* Caixa que aparece ao clicar em "conta" */
@@ -168,7 +191,7 @@ h2 {
 
 /* @media = "só use as regras abaixo SE a tela tiver no máximo 1366px de largura"
    (notebooks menores). Aqui só o cadastro muda de lugar. */
-@media (max-width: 1366px) {
+@media (max-width: 1466px) {
     .divcadrasto {
         width: 400px;
         height: 500px;
@@ -178,4 +201,65 @@ h2 {
         left: 35%;                       /* um pouco mais à esquerda que os 39% de cima */
         top: 100px;
     }
+
+.rl2 {
+    background-color: white;             /* cor que aparece se a imagem não carregar */
+    border: 2px black solid;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;              /* conteúdo empilhado */
+    justify-content: center;             /* centraliza na vertical */
+    align-items: center;                 /* centraliza na horizontal */
+    border-radius: 30px;                 /* cantos arredondados */
+    position: absolute;
+    left: 195px;                        /* valor negativo: empurra para a ESQUERDA do ponto de referência */
+}
+
+.trocacell{
+    background-color: white;             /* cor que aparece se a imagem não carregar */
+    border: 2px black solid;
+    width: 501px !important;
+    height: 200px !important;
+    display: flex;
+    flex-direction: column;              /* conteúdo empilhado */
+    justify-content: center;             /* centraliza na vertical */
+    align-items: center;                 /* centraliza na horizontal */
+    border-radius: 30px;                 /* cantos arredondados */
+    position: absolute;
+    left: 150px; 
+    bottom: -120px;
+}
+.trocacell2{
+    background-color: white;             /* cor que aparece se a imagem não carregar */
+    border: 2px black solid;
+    width: 500px !important;
+    height: 360px !important;
+    display: flex;
+    flex-direction: column;              /* conteúdo empilhado */
+    justify-content: center;             /* centraliza na vertical */
+    align-items: center;                 /* centraliza na horizontal */         
+    position: absolute;
+    left: 150px;
+    top: 200px !important; 
+    
+}
+.area-carrinho2 {
+    position: absolute;
+    left: 230px;                         /* 365px da borda esquerda da página */
+    top: 130px;                          /* 130px do topo da página */
+    width: 600px !important;
+    
+}
+.iph{
+    bottom: 190px !important;
+}
+.iph2{
+    bottom: 60px !important;
+    left: 190px !important;
+}
+.imagem{
+    width: 150px !important;
+    height: 200px !important;
+}
 }

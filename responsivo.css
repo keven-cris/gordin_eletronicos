@@ -106,7 +106,7 @@
 
   /* lista de celulares (pagina1) */
   /* Vira uma COLUNA: os cards ficam um embaixo do outro, centralizados */
-  .divdecelular {
+  .divdecelular, .divdecelular2 {
     width: 100% !important;
     height: auto !important;
     display: flex;
@@ -117,7 +117,7 @@
   }
 
   /* Cards: deixam de ser "absolute" e passam a ocupar 90% da largura (até 340px) */
-  .troca, .celular, .celular2 {
+  .troca, .celular, .celular2, .infos {
     position: relative !important;
     left: auto !important;
     top: auto !important;
@@ -131,12 +131,12 @@
   }
 
   /* Tudo que está dentro dos cards volta ao fluxo normal (cancela posições do HTML) */
-  .troca *, .celular *, .celular2 * {
+  .troca *, .celular *, .celular2 *, .infos *, .minas * {
     position: static !important;
   }
 
   /* Imagens dos cards: centralizadas e proporcionais */
-  .troca img, .celular img, .celular2 img {
+  .troca img, .celular img, .celular2 img, .minas img {
     display: block;                      /* permite centralizar com margin auto */
     margin: 0 auto;                      /* 0 em cima/embaixo, "auto" nos lados = centraliza */
     width: 70% !important;
@@ -144,7 +144,7 @@
   }
 
   /* Textos dos cards centralizados */
-  .celular p, .celular2 p, .troca p {
+  .celular p, .celular2 p, .troca p, .infos p{
     text-align: center;
     margin: 6px 0;
   }
@@ -154,14 +154,14 @@
 
   /* carrinho / vender celular (pagina2 e pagina3) */
   /* Área do carrinho entra no fluxo normal e ocupa a largura toda */
-  .area-carrinho {
+  .area-carrinho, .area-carrinho2{
     position: static !important;
     width: 100% !important;
     margin: 10px 0 20px;
   }
 
   /* Caixa do carrinho: centralizada, com largura máxima de 500px */
-  .area-carrinho .rl {
+  .area-carrinho, .area-carrinho2, .rl{
     position: static !important;
     width: 100% !important;
     max-width: 500px;
@@ -171,9 +171,39 @@
     padding: 15px;
     box-sizing: border-box;
   }
-
+  .rl2 {
+    position: static !important;
+    width: 100% !important;
+    max-width: 500px;
+    height: auto !important;
+    min-height: 200px;                   /* altura mínima para não ficar achatada */
+    margin: 0 auto;                      /* centraliza */
+    padding: 15px;
+    box-sizing: border-box;
+   
+  }
+  .trocacell{
+    position: static !important;
+    width: 100% !important;
+    max-width: 500px;
+    height: auto !important;
+    min-height: 200px;                   /* altura mínima para não ficar achatada */
+    margin: 0 auto;                      /* centraliza */
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .trocacell2{
+    position: static !important;
+    width: 100% !important;
+    max-width: 500px;
+    height: auto !important;
+    min-height: 200px;                   /* altura mínima para não ficar achatada */
+    margin: 0 auto;                      /* centraliza */
+    padding: 15px;
+    box-sizing: border-box;
+  }
   /* Bloco "carrinho vazio" se adapta */
-  .carrinho-vazio { width: 100% !important; height: auto !important; }
+  .carrinho-vazio  { width: 100% !important; height: auto !important; }
 
   /* formas de pagamento */
   /* Quadro cinza entra no fluxo normal, centralizado e abaixo do carrinho */
@@ -214,22 +244,23 @@
   .divdentro { position: static !important; }
 
   /* imagens decorativas: uma de cada lado do título, sempre visíveis */
-  .decor1, .decor2 {
+  .decor1, .decor2, .decor3, .decor4{
     position: static !important;
     left: auto !important;
     top: auto !important;
     width: 12vw;                         /* vw = 12% da largura da TELA (cresce e diminui com ela) */
-    min-width: 60px;                     /* nunca menor que 60px */
+    min-width: 60px;                      /* nunca menor que 60px */
     max-width: 120px;                    /* nunca maior que 120px */
     margin-top: 70px;
   }
 
   /* float = "flutua" para a esquerda/direita e o título se encaixa no meio */
   .decor1 { float: left; margin-left: 8px; }
-  .decor2 { float: right; margin-right: 8px; }
-
+  .decor2 { float: right; margin-right: 8px;}
+  .decor3 { float: left; margin-left: 8px; }
+  .decor4 { float: right; margin-right: 8px;}
   /* A imagem preenche a caixa e mantém a proporção */
-  .decor1 img, .decor2 img {
+  .decor1 img, .decor2 img,.decor3 img, .decor4 img {
     display: block;
     width: 100% !important;
     height: auto !important;
@@ -259,6 +290,8 @@
 
   /* Caixa de atendimento com largura máxima */
   .atendimento { max-width: 340px; box-sizing: border-box; }
+  .iph{bottom: 10px !important;}
+  .iph2{bottom: 10px !important;}
 }
 
 /* ===== CELULAR PEQUENO (até 600px) ===== */
@@ -266,5 +299,12 @@
 @media (max-width: 600px) {
   body { font-size: 14px; }                          /* letra um pouco menor */
   .troca, .celular, .celular2 { max-width: 100%; }   /* cards podem ocupar toda a largura */
-  .https, .htt { font-size: 18px; }                  /* textos de pagamento menores */
+  .https, .htt { font-size: 18px; }            /* textos de pagamento menores */
+  .iph{
+    bottom: 10px !important;
+  }
+  .iph2{
+    bottom: 10px !important;
+    left: 0px !important;
+}
 }
